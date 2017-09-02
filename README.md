@@ -8,9 +8,9 @@
 get_role_data:
 ```php
 ...
-
+$query = eam_packets_lib::p_struct("N==q/N==roleid", ['q' => -1, 'roleid' => $role_id]);
+...
 $output = eam_packets_lib::un_struct("cuint==opcode/cuint==length/H=4=dbretcode/N==retcode/RoleData==role", $response, $offset);
-
 ...
 ```
 $RoleData = eam_pw_packets::get_role_data(1024);
