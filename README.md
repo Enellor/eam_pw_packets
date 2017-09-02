@@ -5,6 +5,14 @@
 
 
 ## Example:
+get_role_data:
+```php
+...
+
+$output = eam_packets_lib::un_struct("cuint==opcode/cuint==length/H=4=dbretcode/N==retcode/RoleData==role", $response, $offset);
+
+...
+```
 $RoleData = eam_pw_packets::get_role_data(1024);
 
 $RoleData dump:
